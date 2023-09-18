@@ -9,7 +9,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="flex-1 container">{children}</main>
+        <main className="py-[2rem] flex flex-col items-center container">{children}</main>
       </body>
     </html>
   );
