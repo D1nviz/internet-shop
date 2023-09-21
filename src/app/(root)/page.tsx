@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import CategoryCard from "@/components/cards/categoty-card";
+import ProductCard from "@/components/cards/product-card";
 import { categories } from "@/components/configs/categories";
+import { products } from "@/components/configs/products";
 import Section from "@/components/layouts/section";
 
 export default function Home() {
@@ -21,12 +23,20 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-      <h2 className="text-5xl font-bold max-w-[60rem] ">
-          Categories
-        </h2>
+        <h2 className="text-5xl font-bold max-w-[60rem] ">Categories</h2>
         <div className="flex gap-8">
           {categories.map(({ title, Icon, img }) => (
-            <CategoryCard title={title} Icon={Icon} img={img}/>
+            <CategoryCard title={title} Icon={Icon} img={img} />
+          ))}
+        </div>
+      </Section>
+      <Section className="py-10">
+        <h3 className="text-3xl font-bold max-w-[60rem] self-start ">
+          Feautured products
+        </h3>
+        <div className="flex gap-8">
+          {products.map(({ title, Icon, img, id}) => (
+            <ProductCard key={id} title={title} Icon={Icon} img={img} price="15$" />
           ))}
         </div>
       </Section>

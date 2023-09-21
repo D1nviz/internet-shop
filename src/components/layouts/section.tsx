@@ -1,12 +1,18 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-type SectionProps = {
+type SectionProps = React.HTMLAttributes<HTMLElement> & {
   children: React.ReactNode;
 };
 
-export default function Section({ children }: SectionProps) {
+export default function Section({ children, className }: SectionProps) {
   return (
-    <section className="flex flex-col items-center gap-6 py-32 text-center ">
+    <section
+      className={cn(
+        "flex flex-col items-center gap-6 mt-16 text-center ",
+        className
+      )}
+    >
       {children}
     </section>
   );
