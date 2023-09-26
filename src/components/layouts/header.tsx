@@ -1,7 +1,6 @@
 import React from "react";
 import { MainNavigation } from "./main-navigation";
 import Logo from "../ui/logo";
-import { Button } from "../ui/button";
 import { UserButton } from "@clerk/nextjs";
 
 export default function Header() {

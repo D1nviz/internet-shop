@@ -17,11 +17,11 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Link
-      key={title}
       href={`/`}
-      className="relative overflow-hidden rounded-md border"
+      className="relative overflow-hidden rounded-md border hover:-translate-y-1 transition "
+      
     >
-      <div className="w-[20rem] px-4 py-4">
+      <div className=" px-4 py-4 w-[19rem]">
         <AspectRatio ratio={4 / 3}>
           <Image
             src={img}

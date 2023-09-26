@@ -24,9 +24,9 @@ export default function Home() {
       </Section>
       <Section>
         <h2 className="text-5xl font-bold max-w-[60rem] ">Categories</h2>
-        <div className="flex gap-8">
-          {categories.map(({ title, Icon, img }) => (
-            <CategoryCard title={title} Icon={Icon} img={img} />
+        <div className="flex gap-8 flex-wrap justify-center">
+          {categories.map(({ title, Icon, img }, id) => (
+            <CategoryCard title={title} Icon={Icon} img={img} key={id} />
           ))}
         </div>
       </Section>
@@ -34,7 +34,7 @@ export default function Home() {
         <h3 className="text-3xl font-bold max-w-[60rem] self-start ">
           Feautured products
         </h3>
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-wrap justify-center">
           {products.map(({ title, Icon, img, id}) => (
             <ProductCard key={id} title={title} Icon={Icon} img={img} price="15$" />
           ))}

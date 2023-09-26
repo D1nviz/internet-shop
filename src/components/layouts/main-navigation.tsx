@@ -19,9 +19,9 @@ import { links } from "../configs/navigation-links";
 
 export function MainNavigation() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <NavigationMenuTrigger>Lobby</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">

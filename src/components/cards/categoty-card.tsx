@@ -14,14 +14,14 @@ export default function CategoryCard({ title, Icon, img }: CategoryCardProps) {
     <Link
       key={title}
       href={`/categories/${title}`}
-      className="w-[20rem] group relative overflow-hidden rounded-md border"
+      className="w-[18rem] group relative overflow-hidden rounded-md border"
     >
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio ratio={16 / 9} >
         <div className="absolute inset-0 z-10 bg-zinc-950/70 transition-colors group-hover:bg-zinc-950/75" />
         <Image
           src={img}
           alt={`${title} category`}
-          className="object-cover transition-transform group-hover:scale-105"
+          className=" object-cover transition-transform group-hover:scale-105"
           fill
           priority={true}
         />
