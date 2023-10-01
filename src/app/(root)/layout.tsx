@@ -1,3 +1,4 @@
+import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 
 export default function RootLayout({
@@ -9,7 +10,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="py-[2rem] flex flex-col items-center container">{children}</main>
+        <main className="py-[2rem] flex flex-col items-center container min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

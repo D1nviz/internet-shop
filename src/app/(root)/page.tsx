@@ -6,6 +6,16 @@ import { categories } from "@/components/configs/categories";
 import { products } from "@/components/configs/products";
 import Section from "@/components/layouts/section";
 
+
+//Tasks
+
+//#1 Create routes for single products,
+//#2 add Page for categories
+//#3 add functionality fillters, sort etc.
+//#4 end authorization
+//#5 Send to db products, connect users to db
+//#6 create some modals, popups, dark mode and other cool features
+
 export default function Home() {
   return (
     <>
