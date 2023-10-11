@@ -10,10 +10,11 @@ import type { CategoryCard } from "@/types";
 type CategoryCardProps = CategoryCard;
 
 export default function CategoryCard({ title, Icon, img }: CategoryCardProps) {
+  
   return (
     <Link
       key={title}
-      href={`/categories/${title}`}
+      href={`/products/${title}`}
       className="w-[18rem] group relative overflow-hidden rounded-md border"
     >
       <AspectRatio ratio={16 / 9} >

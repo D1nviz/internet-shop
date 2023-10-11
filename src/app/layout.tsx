@@ -23,9 +23,8 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={cn("min-h-screen", inter.className)}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+         
             {children}
-          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

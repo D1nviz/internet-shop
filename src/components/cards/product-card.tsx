@@ -17,9 +17,8 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Link
-      href={`/`}
+      href={`/products/category/id`}
       className="relative overflow-hidden rounded-md border hover:-translate-y-1 transition "
-      
     >
       <div className=" px-4 py-4 w-[19rem]">
         <AspectRatio ratio={4 / 3}>
@@ -32,25 +31,23 @@ export default function ProductCard({
           />
         </AspectRatio>
         <div
-            className={cn(
-              buttonVariants({
-                size: "icon",
-                className:
-                  "absolute top-6 left-6 pointer-events-none h-8 w-8 bg-zinc-300/90 text-zinc-950 border border-zinc-300",
-              })
-            )}
-            aria-hidden="true"
-          >
-            <Icon className="h-4 w-4" />
-          </div>
+          className={cn(
+            buttonVariants({
+              size: "icon",
+              className:
+                "absolute top-6 left-6 pointer-events-none h-8 w-8 bg-zinc-300/90 text-zinc-950 border border-zinc-300",
+            })
+          )}
+          aria-hidden="true"
+        >
+          <Icon className="h-4 w-4" />
+        </div>
         <div className="pl-1 mt-2 text-left ">
-          <h4 className="capitalize  font-semibold text-lg">
-            {title}
-          </h4>
-         <div className="flex justify-between items-center">
-         <span className="text-zinc-500">{price}</span>
-         <Button>Add to Cart</Button>
-         </div>
+          <h4 className="capitalize  font-semibold text-lg">{title}</h4>
+          <div className="flex justify-between items-center">
+            <span className="text-zinc-500">{price}</span>
+            <Button>Add to Cart</Button>
+          </div>
         </div>
       </div>
     </Link>

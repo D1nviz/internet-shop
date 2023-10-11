@@ -6,7 +6,6 @@ import { categories } from "@/components/configs/categories";
 import { products } from "@/components/configs/products";
 import Section from "@/components/layouts/section";
 
-
 //Tasks
 
 //#1 Create routes for single products,
@@ -45,8 +44,14 @@ export default function Home() {
           Feautured products
         </h3>
         <div className="flex gap-8 flex-wrap justify-center">
-          {products.map(({ title, Icon, img, id}) => (
-            <ProductCard key={id} title={title} Icon={Icon} img={img} price="15$" />
+          {products.map(({ title, Icon, img, id }) => (
+            <ProductCard
+              key={id}
+              title={title}
+              Icon={Icon}
+              img={img}
+              price="15$"
+            />
           ))}
         </div>
       </Section>
